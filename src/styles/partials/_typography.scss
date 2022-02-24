@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../../assets/fonts/Montserrat-Regular.ttf');
+    // font-weight: normal;
+    // font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../../assets/fonts/Montserrat-Bold.ttf');
+    font-weight: bold;
+    // font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../../assets/fonts/Montserrat-Light.ttf');
+    font-weight: 300;
+    // font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../../assets/fonts/Montserrat-LightItalic.ttf');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Graduate';
+    src: url('../../assets/fonts/Graduate-Regular.ttf');
+}
+
+$font-stack: "Montserrat", sans-serif;
+$font-stack-alternate: "Graduate", "Montserrat", sans-serif;
+$root-font-size: 16px;
+
+h1 {
+    font-family: $font-stack-alternate;
+}
