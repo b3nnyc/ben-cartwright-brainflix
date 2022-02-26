@@ -1,14 +1,36 @@
 // import './App.css';
-import Nav from './components/Nav/Nav'
+import Nav from "./components/Nav/Nav";
+import HeroDescription from "./components/HeroDescription/HeroDescription";
+import Comments from "./components/Comments/Comments";
+import HeroVideo from "./components/HeroVideo/HeroVideo";
+import { Component } from "react";
+import VideoData from "./data/video-details.json";
 
+class App extends Component {
+  state = {
+    VideoData,
+    currentVideo: VideoData[0],
+  };
 
-function App() {
-  document.title = "Brainflix by Ben"
-  return (
-    <>
-      <Nav />
-    </>
-  );
+  updateCurrentVideo = (id) => {
+    this.setState({
+      currentVideo: id,
+    });
+  };
+
+  render() {
+    return (
+      <>
+        <Nav />
+        <HeroVideo
+          video={this.state.currentVideo}
+          updateCurrentVideo={this.updateCurrentVideo}
+        />
+        <HeroDescription description={this.state.currentVideo} />
+        <Comments comments={this.state.currentVideo.comments} />
+      </>
+    );
+  }
 }
 
 export default App;

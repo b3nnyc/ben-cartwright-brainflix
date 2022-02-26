@@ -1,24 +1,31 @@
 @use "variables" as *;
 
 @mixin tablet {
-    @media (min-width: $tablet-breakpoint) {
-        @content;
-    }
-};
+  @media (min-width: $tablet-breakpoint) {
+    @content;
+  }
+}
 
 @mixin desktop {
-    @media (min-width: $desktop-breakpoint) {
-        @content;
-    }
-};
+  @media (min-width: $desktop-breakpoint) {
+    @content;
+  }
+}
 
 @mixin flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @mixin border-radius-right($border-radius) {
-    border-top-right-radius: $border-radius;
-    border-bottom-right-radius: $border-radius;
+  border-top-right-radius: $border-radius;
+  border-bottom-right-radius: $border-radius;
+}
+
+@mixin font($font-size, $line-height, $font-weight) {
+  font-family: $font-stack;
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: $font-weight;
 }
