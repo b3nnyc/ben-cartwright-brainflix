@@ -23,7 +23,7 @@ function Comments({ comments }) {
         </button>
       </div>
       {comments.map((comment) => (
-        <div className="pastComments">
+        <div className="pastComments" key={comment.timestamp}>
           <div className="pastComments__avatar"></div>
           <div className="pastComments__body">
             <h4 className="pastComments__name">{comment.name}</h4>

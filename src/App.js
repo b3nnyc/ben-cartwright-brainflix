@@ -5,10 +5,11 @@ import Comments from "./components/Comments/Comments";
 import HeroVideo from "./components/HeroVideo/HeroVideo";
 import { Component } from "react";
 import VideoData from "./data/video-details.json";
+import NextVideos from "./components/NextVideos/NextVideos";
+import VideoList from "./data/videos.json";
 
 class App extends Component {
   state = {
-    VideoData,
     currentVideo: VideoData[0],
   };
 
@@ -28,6 +29,7 @@ class App extends Component {
         />
         <HeroDescription description={this.state.currentVideo} />
         <Comments comments={this.state.currentVideo.comments} />
+        <NextVideos videoArray={VideoList} />
       </>
     );
   }

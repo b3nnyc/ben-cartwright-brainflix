@@ -4,9 +4,7 @@ function HeroVideo({ video }) {
   return (
     <section className="video">
       <div className="video__content">
-        <div>
-          <img src={video.image}></img>
-        </div>
+        <video className="video__player" poster={video.image} controls></video>
       </div>
     </section>
   );
