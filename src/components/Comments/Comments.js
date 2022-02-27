@@ -11,6 +11,7 @@ function Comments({ comments }) {
         <input
           className="newComment__search"
           type="text"
+          title="JOIN THE CONVERSATION"
           placeholder="Add a new comment"
         ></input>
         <button
