@@ -1,9 +1,8 @@
+import humandate from "human-date";
 import "./Comments.scss";
-import React from "react";
-const { useState } = React;
 
 function Comments({ comments }) {
-  const [count, setCount] = useState(3);
+  const count = comments.length;
   return (
     <section className="comments">
       <h3 className="comments__counter">{count} Comments</h3>
@@ -17,7 +16,7 @@ function Comments({ comments }) {
         <button
           className="newComment__button"
           type="submit"
-          onClick={() => setCount(count + 1)}
+          // onClick={() => setCount(count + 1)}
         >
           COMMENT
         </button>
@@ -27,7 +26,9 @@ function Comments({ comments }) {
           <div className="pastComments__avatar"></div>
           <div className="pastComments__body">
             <h4 className="pastComments__name">{comment.name}</h4>
-            <h5 className="pastComments__date">{comment.timestamp}</h5>
+            <h5 className="pastComments__date">
+              {humandate.prettyPrint(new Date(comment.timestamp))}
+            </h5>
           </div>
           <p className="pastComments__copy">{comment.comment}</p>
         </div>

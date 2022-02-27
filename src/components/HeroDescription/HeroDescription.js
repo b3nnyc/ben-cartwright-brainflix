@@ -1,6 +1,7 @@
 import "./HeroDescription.scss";
 import views from "../../assets/images/views.svg";
 import likes from "../../assets/images/likes.svg";
+import humandate from "human-date";
 
 function HeroDescription({ description }) {
   return (
@@ -9,7 +10,9 @@ function HeroDescription({ description }) {
         <h2 className="description__title">{description.title}</h2>
         <div className="description__container">
           <h3 className="description__channel">{description.channel}</h3>
-          <h4 className="description__date">{description.timestamp}</h4>
+          <h4 className="description__date">
+            {humandate.prettyPrint(new Date(description.timestamp))}
+          </h4>
           <div className="description__views">
             <img
               className="description__views-img"

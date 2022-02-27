@@ -1,4 +1,4 @@
-// import './App.css';
+import "./styles/App.scss";
 import Nav from "./components/Nav/Nav";
 import HeroDescription from "./components/HeroDescription/HeroDescription";
 import Comments from "./components/Comments/Comments";
@@ -10,26 +10,33 @@ import VideoList from "./data/videos.json";
 
 class App extends Component {
   state = {
-    currentVideo: VideoData[0],
+    currentVideoId: VideoData[0].id,
+    videoList: VideoList,
   };
 
   updateCurrentVideo = (id) => {
     this.setState({
-      currentVideo: id,
+      currentVideoId: id,
     });
   };
 
   render() {
+    const filtered = this.state.videoList.filter(
+      (video) => video.id !== this.state.currentVideoId
+    );
+    const current = VideoData.find(
+      (video) => video.id === this.state.currentVideoId
+    );
     return (
       <>
         <Nav />
-        <HeroVideo
-          video={this.state.currentVideo}
+        <HeroVideo video={current} />
+        <HeroDescription description={current} />
+        <Comments comments={current.comments} />
+        <NextVideos
+          videoArray={filtered}
           updateCurrentVideo={this.updateCurrentVideo}
         />
-        <HeroDescription description={this.state.currentVideo} />
-        <Comments comments={this.state.currentVideo.comments} />
-        <NextVideos videoArray={VideoList} />
       </>
     );
   }
