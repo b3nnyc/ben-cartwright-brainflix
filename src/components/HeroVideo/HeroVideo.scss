@@ -1,5 +1,18 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles//partials/variables" as *;
+
 .video {
+  background-color: black;
   &__player {
     width: 100%;
+    @include tablet {
+      width: 90%;
+      margin-left: 5%;
+    }
+    @include desktop {
+      width: 80%;
+      margin-left: 10%;
+    }
   }
 }

@@ -1,4 +1,4 @@
-import humandate from "human-date";
+import timestampToDate from "timestamp-to-date";
 import "./Comments.scss";
 
 function Comments({ comments }) {
@@ -28,7 +28,7 @@ function Comments({ comments }) {
           <div className="pastComments__body">
             <h4 className="pastComments__name">{comment.name}</h4>
             <h5 className="pastComments__date">
-              {humandate.prettyPrint(new Date(comment.timestamp))}
+              {timestampToDate(comment.timestamp, "MM/dd/yyyy")}{" "}
             </h5>
           </div>
           <p className="pastComments__copy">{comment.comment}</p>

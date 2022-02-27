@@ -1,0 +1,113 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles//partials/variables" as *;
+
+.description {
+  padding-left: 3%;
+  padding-right: 3%;
+
+  &__title {
+    color: $BrainFlix-Black;
+    margin-bottom: 2%;
+    padding-bottom: 3%;
+    @include font(6vw, 8vw, 600);
+    border-bottom: 3px solid $mercury;
+    @include tablet {
+      @include font(2.75rem, 4rem, 600);
+      border-bottom: none;
+    }
+  }
+
+  &__container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 3px solid $mercury;
+    @include tablet {
+      align-items: flex-end;
+      height: 1rem;
+    }
+  }
+
+  &__views-count,
+  &__likes-count,
+  &__date {
+    @include font(3vw, 1rem, 400);
+    color: $silver;
+    @include tablet {
+      @include font(1.25rem, 1rem, 400);
+    }
+  }
+
+  &__left {
+    @include tablet {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__channel {
+    margin-top: 22%;
+    @include font(3vw, 1rem, 500);
+    @include tablet {
+      @include font(1.25rem, 1rem, 500);
+      padding-right: 3rem;
+    }
+  }
+
+  &__date {
+    margin-top: 25%;
+  }
+
+  &__right {
+    margin-right: 10%;
+    @include tablet {
+      display: flex;
+      align-items: center;
+      margin-right: 2%;
+    }
+  }
+
+  &__views {
+    display: flex;
+    align-items: center;
+  }
+
+  &__views-count {
+    padding-left: 10%;
+  }
+
+  &__views-img {
+    width: 6.5vw;
+    @include tablet {
+      width: 4.5vw;
+    }
+  }
+
+  &__likes {
+    display: flex;
+    align-items: center;
+    padding-left: 3%;
+  }
+
+  &__likes-img {
+    width: 3.5vw;
+    @include tablet {
+      padding-left: 10%;
+      width: 4vw;
+    }
+  }
+
+  &__likes-count {
+    margin: 0;
+    padding-left: 10%;
+  }
+
+  &__copy {
+    @include font(4vw, 6vw, 400);
+    @include tablet {
+      margin-top: 4%;
+      @include font(1rem, 1.75rem, 400);
+    }
+  }
+}
