@@ -19,6 +19,9 @@
       @include font(2.75rem, 4rem, 600);
       border-bottom: none;
     }
+    @include desktop {
+      margin-bottom: 3%;
+    }
   }
 
   &__container {
@@ -29,6 +32,9 @@
     @include tablet {
       align-items: flex-end;
       height: 1rem;
+    }
+    @include desktop {
+      width: 112%;
     }
   }
 
@@ -69,6 +75,9 @@
       align-items: center;
       margin-right: 2%;
     }
+    @include desktop {
+      margin-right: 5%;
+    }
   }
 
   &__views {
@@ -85,6 +94,9 @@
     @include tablet {
       width: 4.5vw;
     }
+    @include desktop {
+      width: 2vw;
+    }
   }
 
   &__likes {
@@ -99,6 +111,9 @@
       padding-left: 10%;
       width: 4vw;
     }
+    @include desktop {
+      width: 2vw;
+    }
   }
 
   &__likes-count {
@@ -111,6 +126,9 @@
     @include tablet {
       margin-top: 4%;
       @include font(1rem, 1.75rem, 400);
+    }
+    @include desktop {
+      width: 110%;
     }
   }
 }

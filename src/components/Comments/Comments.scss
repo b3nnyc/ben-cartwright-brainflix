@@ -6,6 +6,10 @@
   margin-top: 5%;
   padding-left: 3%;
   padding-right: 3%;
+  @include desktop {
+    margin-top: 0;
+    padding-left: 7%;
+  }
   &__counter {
     @include font(4vw, 6vw, 500);
     @include tablet {
@@ -21,6 +25,10 @@
     border-bottom: 2px solid $mercury;
     @include tablet {
       padding-bottom: 2%;
+    }
+    @include desktop {
+      width: 111%;
+      border-bottom: none;
     }
   }
 
@@ -62,6 +70,9 @@
       height: 3.55rem;
       width: 55vw;
     }
+    @include desktop {
+      width: 35vw;
+    }
   }
   &__form-box::placeholder {
     color: black;
@@ -86,6 +97,9 @@
       width: 25vw;
       margin-left: 4%;
     }
+    @include desktop {
+      width: 13vw;
+    }
   }
 
   &__button:hover {
@@ -103,6 +117,11 @@
     margin-bottom: 0%;
     padding-top: 2%;
     padding-bottom: 0;
+  }
+  @include desktop {
+    width: 111%;
+    border-bottom: none;
+    border-top: 2px solid $mercury;
   }
   &__container {
     width: 80%;
@@ -122,25 +141,37 @@
       margin-bottom: 0;
       margin-right: 5%;
     }
+    @include desktop {
+      margin-top: 2%;
+    }
   }
 
   &__body {
     width: 95%;
     display: flex;
     justify-content: space-between;
+    @include desktop {
+      height: 40%;
+    }
   }
 
   &__name {
     @include font(3vw, 1rem, 500);
     @include tablet {
-      @include font(1rem, 1rem, 500);
+      @include font(1.75vw, 2.5vw, 500);
+    }
+    @include desktop {
+      @include font(1.25rem, 1.75rem, 500);
     }
   }
 
   &__date {
     @include font(3vw, 1rem, 400);
     @include tablet {
-      @include font(1rem, 1rem, 400);
+      @include font(1.75vw, 2.5vw, 400);
+    }
+    @include desktop {
+      @include font(1.25rem, 1.75rem, 400);
     }
     color: $silver;
   }
@@ -151,7 +182,11 @@
     position: relative;
     @include font(3vw, 4.5vw, 400);
     @include tablet {
-      @include font(1rem, 1.5rem, 400);
+      @include font(2vw, 2.5vw, 400);
+    }
+    @include desktop {
+      @include font(1rem, 1.75rem, 400);
+      margin-bottom: 2%;
     }
   }
 }

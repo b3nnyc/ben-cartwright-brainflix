@@ -3,7 +3,7 @@ import "./NextVideos.scss";
 function NextVideos({ videoArray, updateCurrentVideo }) {
   return (
     <section className="nextVideos">
-      <h5 className="nextVideos__title">NEXT VIDEOS</h5>
+      <h5 className="nextVideos__header">NEXT VIDEOS</h5>
       {videoArray.map((videoObj) => {
         return (
           <div
