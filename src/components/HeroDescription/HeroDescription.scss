@@ -5,6 +5,9 @@
 .description {
   padding-left: 3%;
   padding-right: 3%;
+  @include desktop {
+    padding-left: 7%;
+  }
 
   &__title {
     color: $BrainFlix-Black;

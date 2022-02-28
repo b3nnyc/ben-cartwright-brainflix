@@ -13,7 +13,7 @@
   align-items: center;
   justify-content: space-evenly;
   @include tablet {
-    height: 5rem;
+    height: 4rem;
     flex-direction: row;
   }
 
@@ -65,6 +65,7 @@
   &__search::placeholder {
     padding-left: 12%;
     vertical-align: middle;
+    color: black;
     transform: translate3d(0, 1px, 0);
     @include tablet {
       padding-left: 15%;
@@ -117,5 +118,9 @@
       margin-left: 0;
       margin-right: 0;
     }
+  }
+
+  &__button:hover {
+    background-color: $BrainFlix-DarkBlue;
   }
 }

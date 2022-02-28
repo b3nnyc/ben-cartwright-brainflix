@@ -1,0 +1,157 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles//partials/variables" as *;
+
+.newComment {
+  margin-top: 5%;
+  padding-left: 3%;
+  padding-right: 3%;
+  &__counter {
+    @include font(4vw, 6vw, 500);
+    @include tablet {
+      margin-top: 4%;
+      margin-bottom: 4%;
+      @include font(1rem, 1.75rem, 500);
+    }
+  }
+
+  &__container {
+    display: flex;
+    padding-bottom: 5%;
+    border-bottom: 2px solid $mercury;
+    @include tablet {
+      padding-bottom: 2%;
+    }
+  }
+
+  &__avatar {
+    vertical-align: middle;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 4%;
+  }
+
+  &__input {
+    @include tablet {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__label {
+    @include font(1rem, 1rem, 500);
+    color: $silver;
+    padding-bottom: 2%;
+  }
+
+  &__form-box {
+    height: 10rem;
+    width: 75vw;
+    border-radius: 5px;
+    border: 2px solid $mercury;
+    background-color: $alabaster;
+    margin-bottom: 5%;
+    @include tablet {
+      height: 3.55rem;
+      width: 55vw;
+    }
+  }
+  &__form-box::placeholder {
+    color: black;
+    padding-left: 3%;
+    @include font(1.25rem, 1.25rem, 400);
+  }
+
+  &__button {
+    width: 76vw;
+    height: 3.5rem;
+    border: none;
+    border-radius: 5px;
+    background-color: $BrainFlix-Blue;
+    color: $white;
+    @include font(1rem, 2rem, 500);
+    background-image: url(../../assets/images/add_comment.svg);
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 5%;
+    @include tablet {
+      height: 4rem;
+      width: 25vw;
+      margin-left: 4%;
+    }
+  }
+
+  &__button:hover {
+    background-color: $BrainFlix-DarkBlue;
+  }
+}
+
+.pastComments {
+  border-bottom: 2px solid $mercury;
+  margin-bottom: 5%;
+  padding-bottom: 2%;
+  @include tablet {
+    display: flex;
+    width: 100%;
+    margin-bottom: 0%;
+    padding-top: 2%;
+    padding-bottom: 0;
+  }
+  &__container {
+    width: 80%;
+    float: right;
+  }
+
+  &__avatar {
+    width: 10vw;
+    height: 10vw;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 4%;
+    margin-bottom: 20%;
+    @include tablet {
+      width: 4rem;
+      height: 4rem;
+      margin-bottom: 0;
+      margin-right: 5%;
+    }
+  }
+
+  &__body {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__name {
+    @include font(3vw, 1rem, 500);
+    @include tablet {
+      @include font(1rem, 1rem, 500);
+    }
+  }
+
+  &__date {
+    @include font(3vw, 1rem, 400);
+    @include tablet {
+      @include font(1rem, 1rem, 400);
+    }
+    color: $silver;
+  }
+
+  &__copy {
+    margin-top: 0;
+    margin-bottom: 5%;
+    position: relative;
+    @include font(3vw, 4.5vw, 400);
+    @include tablet {
+      @include font(1rem, 1.5rem, 400);
+    }
+  }
+}
