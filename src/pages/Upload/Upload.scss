@@ -8,12 +8,206 @@
     padding-top: 7%;
     padding-left: 5%;
     color: $BrainFlix-Black;
-    @include font(5vw, 1rem, 500);
+    @include font(6vw, 1rem, 600);
+    @include tablet {
+      @include font(4.5vw, 1rem, 600);
+      margin-top: 1%;
+      margin-bottom: 4%;
+    }
+    @include desktop {
+      @include font(3.5vw, 1rem, 600);
+    }
+  }
+
+  &__container {
+    @include tablet {
+      border-top: 2px solid $mercury;
+      border-bottom: 2px solid $mercury;
+      padding-top: 3%;
+      width: 90%;
+      margin: auto;
+    }
+    @include desktop {
+      display: flex;
+    }
+  }
+
+  &__top {
+    @include tablet {
+      width: 40vw;
+      padding-bottom: 2%;
+    }
   }
 
   &__img {
     width: 90vw;
     margin-left: 5%;
     border-radius: 10px;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    @include tablet {
+      width: 50vw;
+      margin-left: 0;
+    }
+    @include desktop {
+      width: 40vw;
+      margin-left: 10%;
+    }
+  }
+
+  &__img-title {
+    padding-left: 5%;
+    margin-bottom: 4%;
+    @include tablet {
+      padding-left: 0;
+    }
+    @include desktop {
+      padding-left: 0;
+      margin-left: 10%;
+    }
+  }
+
+  &__forms {
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    margin-left: 5%;
+    @include tablet {
+      margin-left: 0;
+    }
+    @include desktop {
+      width: 40vw;
+      margin: none;
+      padding-left: 7%;
+    }
+  }
+
+  &__forms input[type="text"] {
+    @include font(2vw, 1rem, 400);
+  }
+
+  &__img-title,
+  &__forms-header1,
+  &__forms-header2 {
+    @include font(3vw, 1rem, 500);
+    color: $silver;
+    @include tablet {
+      @include font(1.25rem, 1rem, 400);
+    }
+  }
+
+  &__forms-title,
+  &__forms-desc {
+    margin-bottom: 5%;
+    margin-top: 2%;
+    padding-left: 2%;
+    background-color: $alabaster;
+    border: 1px solid $mercury;
+    border-radius: 5px;
+  }
+
+  &__forms-title {
+    height: 3rem;
+    @include tablet {
+      height: 4rem;
+    }
+  }
+
+  &__forms-desc {
+    height: 6rem;
+    padding-top: 2%;
+    resize: none;
+    @include font(1.5vw, 1rem, 400);
+
+    @include tablet {
+      height: 8rem;
+    }
+    @include desktop {
+      height: 12.85vw;
+    }
+  }
+
+  &__forms-title::placeholder,
+  &__forms-desc::placeholder {
+    color: $BrainFlix-Black;
+    @include font(2.5vw, 2.5vw, 400);
+    @include tablet {
+      @include font(2vw, 2.5vw, 400);
+    }
+    @include desktop {
+      @include font(1.5vw, 2.5vw, 400);
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    margin: auto;
+    @include tablet {
+      flex-direction: row;
+      align-items: center;
+      padding-top: 5%;
+      padding-bottom: 5%;
+      justify-content: flex-end;
+    }
+    @include desktop {
+      padding-top: 3%;
+    }
+  }
+
+  &__buttons-publish {
+    background-color: $BrainFlix-Blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    height: 4rem;
+    margin-bottom: 5%;
+    background-image: url(../../assets/images/publish.svg);
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 5%;
+    background-size: 6%;
+    @include font(3vw, 1rem, 500);
+    @include tablet {
+      float: right;
+      width: 25vw;
+      margin-bottom: 0;
+      background-size: 15%;
+      @include font(2.25vw, 1rem, 500);
+      margin-left: 5%;
+    }
+    @include desktop {
+      margin-right: 4%;
+      width: 20vw;
+      height: 4vw;
+      @include font(2vw, 1rem, 500);
+      padding-top: 0.5%;
+    }
+  }
+
+  &__buttons-cancel-mobile,
+  &__buttons-cancel {
+    background: none;
+    border: none;
+    height: 2rem;
+    color: $BrainFlix-Blue;
+    @include font(3vw, 1rem, 500);
+  }
+
+  &__buttons-cancel-mobile {
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__buttons-cancel {
+    display: none;
+    @include tablet {
+      display: block;
+    }
+    @include desktop {
+      @include font(2vw, 1rem, 500);
+    }
   }
 }
