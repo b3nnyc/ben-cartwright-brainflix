@@ -1,0 +1,19 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles//partials/variables" as *;
+
+.upload {
+  &__title {
+    border-top: 2px solid $mercury;
+    padding-top: 7%;
+    padding-left: 5%;
+    color: $BrainFlix-Black;
+    @include font(5vw, 1rem, 500);
+  }
+
+  &__img {
+    width: 90vw;
+    margin-left: 5%;
+    border-radius: 10px;
+  }
+}

@@ -1,18 +1,12 @@
 import "./NextVideos.scss";
 
-function NextVideos({ videoArray, updateCurrentVideo }) {
+function NextVideos({ videoArray }) {
   return (
     <section className="nextVideos">
       <h5 className="nextVideos__header">NEXT VIDEOS</h5>
       {videoArray.map((videoObj) => {
         return (
-          <div
-            className="nextVideos__container"
-            key={videoObj.id}
-            onClick={() => {
-              updateCurrentVideo(videoObj.id);
-            }}
-          >
+          <div className="nextVideos__container" key={videoObj.id}>
             <img
               className="nextVideos__photo"
               src={videoObj.image}
