@@ -129,6 +129,7 @@
     }
     @include desktop {
       width: 110%;
+      @include font(1vw, 1.5vw, 400);
     }
   }
 }

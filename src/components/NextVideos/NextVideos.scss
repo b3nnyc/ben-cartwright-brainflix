@@ -28,6 +28,15 @@
     }
   }
 
+  &__link {
+    text-decoration: none;
+    display: flex;
+    width: 100%;
+    @include desktop {
+      align-items: center;
+    }
+  }
+
   &__container {
     display: flex;
     margin-bottom: 2%;
@@ -39,17 +48,20 @@
 
   &__photo {
     vertical-align: middle;
-    width: 30vw;
+    min-width: 30vw;
+    max-width: 30vw;
     height: 20vw;
     border-radius: 5px;
     object-fit: cover;
     margin-right: 5%;
     @include tablet {
-      width: 18vw;
+      min-width: 18vw;
+      max-width: 18vw;
       height: 10vw;
     }
     @include desktop {
-      width: 10vw;
+      min-width: 11vw;
+      max-width: 11vw;
       height: 6vw;
     }
   }
@@ -85,7 +97,7 @@
 
   &__text {
     @include desktop {
-      height: 8rem;
+      height: 7rem;
     }
   }
 }

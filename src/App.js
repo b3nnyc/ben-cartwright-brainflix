@@ -10,6 +10,12 @@ function App() {
       <Nav />
       <Switch>
         <Route path="/" exact component={Home} />
+        <Route
+          path="/watch/:id"
+          render={(routerProps) => {
+            return <Home {...routerProps} />;
+          }}
+        />
         <Route path="/upload" component={Upload} />
       </Switch>
     </BrowserRouter>

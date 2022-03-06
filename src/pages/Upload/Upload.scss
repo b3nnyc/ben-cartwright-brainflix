@@ -5,7 +5,7 @@
 .upload {
   &__title {
     border-top: 2px solid $mercury;
-    padding-top: 7%;
+    padding-top: 5%;
     padding-left: 5%;
     color: $BrainFlix-Black;
     @include font(6vw, 1rem, 600);
@@ -15,7 +15,7 @@
       margin-bottom: 4%;
     }
     @include desktop {
-      @include font(3.5vw, 1rem, 600);
+      @include font(2.5vw, 1rem, 600);
     }
   }
 
@@ -50,8 +50,7 @@
       margin-left: 0;
     }
     @include desktop {
-      width: 40vw;
-      margin-left: 10%;
+      width: 38vw;
     }
   }
 
@@ -63,7 +62,6 @@
     }
     @include desktop {
       padding-left: 0;
-      margin-left: 10%;
     }
   }
 
@@ -78,7 +76,7 @@
     @include desktop {
       width: 40vw;
       margin: none;
-      padding-left: 7%;
+      padding-left: 5%;
     }
   }
 
@@ -111,6 +109,9 @@
     @include tablet {
       height: 4rem;
     }
+    @include desktop {
+      height: 3vw;
+    }
   }
 
   &__forms-desc {
@@ -123,7 +124,7 @@
       height: 8rem;
     }
     @include desktop {
-      height: 12.85vw;
+      height: 12.25vw;
     }
   }
 
@@ -179,11 +180,14 @@
     }
     @include desktop {
       margin-right: 4%;
-      width: 20vw;
-      height: 4vw;
-      @include font(2vw, 1rem, 500);
+      width: 18vw;
+      height: 3.25vw;
+      @include font(1.75vw, 1rem, 500);
       padding-top: 0.5%;
     }
+  }
+  &__buttons-publish:hover {
+    background-color: $BrainFlix-DarkBlue;
   }
 
   &__buttons-cancel-mobile,
@@ -193,6 +197,11 @@
     height: 2rem;
     color: $BrainFlix-Blue;
     @include font(3vw, 1rem, 500);
+  }
+
+  &__buttons-cancel-mobile:hover,
+  &__buttons-cancel:hover {
+    color: $BrainFlix-DarkBlue;
   }
 
   &__buttons-cancel-mobile {
@@ -207,7 +216,7 @@
       display: block;
     }
     @include desktop {
-      @include font(2vw, 1rem, 500);
+      @include font(1.75vw, 1rem, 500);
     }
   }
 }

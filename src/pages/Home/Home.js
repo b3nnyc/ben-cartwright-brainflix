@@ -24,17 +24,27 @@ class Home extends Component {
     });
   }
 
+  componentDidUpdate(prevProps) {
+    const currentId = this.props.match.params.id;
+    const prevId = prevProps.match.params.id;
+
+    if (currentId && (currentId !== prevId || !this.state.videoObj)) {
+      api.getVideoById(currentId).then((response) => {
+        this.setState({
+          videoObj: response.data,
+        });
+      });
+    }
+  }
+
   render() {
     if (!this.state.videoObj) {
-      return <p>Loading...</p>;
+      return <p className="loading">Loading...</p>;
     }
 
     const filtered = this.state.videoList.filter(
       (video) => video.id !== this.state.videoObj.id
     );
-
-    const { comments } = this.state.videoObj;
-    console.log(comments);
 
     return (
       <main className="main">
