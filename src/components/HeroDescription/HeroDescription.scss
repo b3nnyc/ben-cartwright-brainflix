@@ -20,8 +20,8 @@
       border-bottom: none;
     }
     @include desktop {
-      margin-bottom: 3%;
-      @include font(2.65vw, 8vw, 600);
+      margin-bottom: 5%;
+      @include font(2.65vw, 3vw, 600);
     }
   }
 
