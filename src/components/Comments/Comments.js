@@ -5,6 +5,7 @@ import "./Comments.scss";
 
 function Comments({ comments }) {
   const count = comments.length;
+  console.log(comments);
   return (
     <section className="newComment">
       <h3 className="newComment__counter">{count} Comments</h3>
