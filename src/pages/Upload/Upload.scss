@@ -223,13 +223,27 @@
 }
 
 .swal-title {
-  @include font(3vw, 3vw, 500);
+  @include font(5vw, 7vw, 500);
+  padding-bottom: 5%;
+  @include tablet {
+    @include font(3vw, 4vw, 500);
+  }
+  @include desktop {
+    @include font(1.5vw, 3vw, 500);
+  }
 }
 
 .swal-text {
-  @include font(1.75vw, 2vw, 400);
+  text-align: center;
+  @include font(4vw, 7vw, 400);
+  @include tablet {
+    @include font(2vw, 2vw, 400);
+  }
+  @include desktop {
+    @include font(1.1vw, 2vw, 400);
+  }
 }
 
-.swal-button {
-  background-color: $BrainFlix-Blue;
+.swal-warning {
+  color: magenta;
 }

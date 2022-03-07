@@ -4,6 +4,7 @@ import HeroVideo from "../../components/HeroVideo/HeroVideo";
 import NextVideos from "../../components/NextVideos/NextVideos";
 import { Component } from "react";
 import api from "../../data/api";
+import "./Home.scss";
 
 class Home extends Component {
   state = {
@@ -39,7 +40,7 @@ class Home extends Component {
 
   render() {
     if (!this.state.videoObj) {
-      return <p className="loading">Loading...</p>;
+      return <div className="loading"></div>;
     }
 
     const filtered = this.state.videoList.filter(

@@ -2,6 +2,7 @@ import React from "react";
 import uploadImg from "../../assets/images/Upload-video-preview.jpg";
 import "./Upload.scss";
 import swal from "sweetalert";
+import "../../styles/partials/_variables.scss";
 
 function Upload() {
   const handleSubmitSuccess = (event) => {
@@ -22,7 +23,10 @@ function Upload() {
       title: "Cancel Upload?",
       text: "All current data will be erased.",
       icon: "warning",
-      buttons: true,
+      buttons: {
+        cancel: true,
+        confirm: true,
+      },
       dangerMode: true,
     }).then((willDelete) => {
       if (willDelete) {
