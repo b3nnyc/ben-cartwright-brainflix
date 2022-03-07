@@ -2,6 +2,19 @@
 @use "../../styles/partials/typography" as *;
 @use "../../styles//partials/variables" as *;
 
+#newComment__container {
+  display: flex;
+  padding-bottom: 5%;
+  border-bottom: 2px solid $mercury;
+  @include tablet {
+    padding-bottom: 2%;
+  }
+  @include desktop {
+    margin-bottom: 3%;
+    width: 112%;
+    border-bottom: none;
+  }
+}
 .newComment {
   margin-top: 5%;
   padding-left: 3%;
@@ -10,6 +23,7 @@
     margin-top: 0;
     padding-left: 7%;
   }
+
   &__counter {
     @include font(4vw, 6vw, 500);
     @include tablet {
@@ -19,20 +33,6 @@
     }
     @include desktop {
       @include font(0.8vw, 1.75rem, 500);
-    }
-  }
-
-  &__container {
-    display: flex;
-    padding-bottom: 5%;
-    border-bottom: 2px solid $mercury;
-    @include tablet {
-      padding-bottom: 2%;
-    }
-    @include desktop {
-      margin-bottom: 2%;
-      width: 112%;
-      border-bottom: none;
     }
   }
 

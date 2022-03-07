@@ -5,10 +5,11 @@ import "./Comments.scss";
 
 function Comments({ comments }) {
   const count = comments.length;
+
   return (
     <section className="newComment">
       <h3 className="newComment__counter">{count} Comments</h3>
-      <div className="newComment__container">
+      <div id="newComment__container">
         <img className="newComment__avatar" src={avatar} alt="avatar" />
         <div className="newComment__input">
           <div className="newComment__form">
