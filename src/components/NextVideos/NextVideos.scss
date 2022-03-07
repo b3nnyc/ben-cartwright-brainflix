@@ -32,9 +32,15 @@
     text-decoration: none;
     display: flex;
     width: 100%;
+    color: $BrainFlix-Black;
     @include desktop {
       align-items: center;
     }
+  }
+
+  &__link:active {
+    color: $BrainFlix-Blue;
+    background-color: $alabaster;
   }
 
   &__container {

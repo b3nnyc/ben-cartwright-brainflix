@@ -141,6 +141,7 @@
   }
 
   &__buttons {
+    text-decoration: none;
     display: flex;
     flex-direction: column;
     width: 90vw;
@@ -219,4 +220,16 @@
       @include font(1.75vw, 1rem, 500);
     }
   }
+}
+
+.swal-title {
+  @include font(3vw, 3vw, 500);
+}
+
+.swal-text {
+  @include font(1.75vw, 2vw, 400);
+}
+
+.swal-button {
+  background-color: $BrainFlix-Blue;
 }
