@@ -1,4 +1,5 @@
 import "./styles/App.scss";
+import "./styles/partials/_global.scss";
 import Nav from "./components/Nav/Nav";
 import Home from "./pages/Home/Home";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
