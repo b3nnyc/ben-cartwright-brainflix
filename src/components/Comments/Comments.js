@@ -5,12 +5,11 @@ import "./Comments.scss";
 
 function Comments({ comments }) {
   const count = comments.length;
-  console.log(comments);
   return (
     <section className="newComment">
       <h3 className="newComment__counter">{count} Comments</h3>
       <div className="newComment__container">
-        <img className="newComment__avatar" src={avatar}></img>
+        <img className="newComment__avatar" src={avatar} alt="avatar" />
         <div className="newComment__input">
           <div className="newComment__form">
             <label className="newComment__label" for="comment">
@@ -30,7 +29,11 @@ function Comments({ comments }) {
       </div>
       {comments.map((comment) => (
         <div className="pastComments" key={comment.timestamp}>
-          <img className="pastComments__avatar" src={blank_avatar}></img>
+          <img
+            className="pastComments__avatar"
+            src={blank_avatar}
+            alt="avatar"
+          />
           <div className="pastComments__container">
             <div className="pastComments__body">
               <h4 className="pastComments__name">{comment.name}</h4>
