@@ -17,6 +17,7 @@ class Home extends Component {
       this.setState({
         videoList: response.data,
       });
+
       api.getVideoById(response.data[0].id).then((response) => {
         this.setState({
           videoObj: response.data,
@@ -35,6 +36,7 @@ class Home extends Component {
           videoObj: response.data,
         });
       });
+      window.scrollTo(0, 0);
     }
   }
 
