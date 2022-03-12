@@ -3,7 +3,7 @@ import Comments from "../../components/Comments/Comments";
 import HeroVideo from "../../components/HeroVideo/HeroVideo";
 import NextVideos from "../../components/NextVideos/NextVideos";
 import { Component } from "react";
-import api from "../../data/api";
+import api from "../../utils/api";
 import "./Home.scss";
 
 class Home extends Component {
@@ -17,7 +17,6 @@ class Home extends Component {
       this.setState({
         videoList: response.data,
       });
-
       api.getVideoById(response.data[0].id).then((response) => {
         this.setState({
           videoObj: response.data,
