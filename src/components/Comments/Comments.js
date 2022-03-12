@@ -13,9 +13,7 @@ function Comments({ comments }) {
         <img className="newComment__avatar" src={avatar} alt="avatar" />
         <div className="newComment__input">
           <div className="newComment__form">
-            <label className="newComment__label" for="comment">
-              JOIN THE CONVERSATION
-            </label>
+            <label className="newComment__label">JOIN THE CONVERSATION</label>
             <input
               className="newComment__form-box"
               type="text"

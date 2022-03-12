@@ -102,6 +102,7 @@
     background-color: $alabaster;
     border: 1px solid $mercury;
     border-radius: 5px;
+    width: 100%;
   }
 
   &__forms-title {
@@ -116,9 +117,9 @@
 
   &__forms-desc {
     height: 6rem;
-    padding-top: 2%;
+    padding-top: 2.5%;
     resize: none;
-    @include font(1.5vw, 1rem, 400);
+    @include font(1.5vw, 1vw, 400);
 
     @include tablet {
       height: 8rem;

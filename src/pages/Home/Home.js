@@ -17,7 +17,10 @@ class Home extends Component {
       this.setState({
         videoList: response.data,
       });
-      api.getVideoById(response.data[0].id).then((response) => {
+
+      const videoId = this.props.match.params.id || response.data[0].id;
+
+      api.getVideoById(videoId).then((response) => {
         this.setState({
           videoObj: response.data,
         });
