@@ -4,6 +4,7 @@ import Nav from "./components/Nav/Nav";
 import Home from "./pages/Home/Home";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Upload from "./pages/Upload/Upload";
+import NotFound from "./pages/NotFound/NotFound";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           }}
         />
         <Route path="/upload" component={Upload} />
+        <Route path="*" component={NotFound} />
       </Switch>
     </BrowserRouter>
   );

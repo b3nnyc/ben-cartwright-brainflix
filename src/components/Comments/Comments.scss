@@ -89,7 +89,7 @@
     @include desktop {
       width: 35vw;
       margin-bottom: 0;
-      height: 2.75rem;
+      height: 3vw;
     }
   }
   &__form-box::placeholder {
@@ -115,7 +115,7 @@
       margin-left: 4%;
     }
     @include desktop {
-      height: 3.05rem;
+      height: 3.25vw;
       width: 13vw;
       @include font(0.9vw, 1vw, 500);
     }

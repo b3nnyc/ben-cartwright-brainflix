@@ -1,0 +1,19 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles//partials/variables" as *;
+
+.error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 12%;
+
+  &__img {
+    margin-bottom: 2%;
+  }
+
+  &__title {
+    @include font(2vw, 2vw, 500);
+  }
+}

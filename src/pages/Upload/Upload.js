@@ -86,7 +86,7 @@ const Upload = ({ history }) => {
             <label className="upload__forms-header2" htmlFor="forms-desc">
               ADD A VIDEO DESCRIPTION
             </label>
-            <textarea
+            <input
               className="upload__forms-desc"
               title="ADD A VIDEO DESCRIPTION"
               placeholder="Add a description to your video"

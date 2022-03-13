@@ -125,7 +125,8 @@
       height: 8rem;
     }
     @include desktop {
-      height: 12.25vw;
+      padding-top: 0;
+      height: 12.5vw;
     }
   }
 
